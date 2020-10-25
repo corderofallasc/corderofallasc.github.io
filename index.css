@@ -1,5 +1,5 @@
 body{
-    <img src="user2.png" th:src="@{user.png}"/> 
+    background:"servers.jpg";
     background-size: cover;
 }
 
