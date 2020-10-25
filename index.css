@@ -1,5 +1,5 @@
 body{
-    background: url(servers.jpg) no-repeat center center fixed;
+    <img src="user2.png" th:src="@{user.png}"/> 
     background-size: cover;
 }
 
