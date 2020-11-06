@@ -25,12 +25,15 @@
                     <div class="col-12 user-img">
                         <img src="user2.png" th:src="@{user.png}"/>
                     </div>
-                    <form class="col-12" th:action="@{/login}" method="get">
+                    <form class="col-12" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+                        <div class="form-group" id="contrasena-group">
+                            <input type="text" class="form-control" placeholder="Servidor" name="server" required/>
+                        </div>
                         <div class="form-group" id="user-group">
-                            <input type="text" class="form-control" placeholder="Nombre de usuario" name="username"/>
+                            <input type="text" class="form-control" placeholder="Nombre de usuario" name="username" required/>
                         </div>
                         <div class="form-group" id="contrasena-group">
-                            <input type="password" class="form-control" placeholder="Contrasena" name="password"/>
+                            <input type="password" class="form-control" placeholder="Contrasena" name="password" required/>
                         </div>
                         <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
                     </form>
